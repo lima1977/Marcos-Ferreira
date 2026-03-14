@@ -604,18 +604,19 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding: 120px 0;
+  padding: 5px 0;
   min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
+
 }
 
 .hero .container {
   position: relative;
   z-index: 2;
-  padding: 80px 15px;
+  padding: 20px 15px;
 }
 
 .hero .hero-content h1 {
@@ -864,8 +865,8 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .about .intro-header {
@@ -873,7 +874,7 @@ section,
 }
 
 .about .intro-header h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 300;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
@@ -1160,14 +1161,14 @@ section,
 # Stats Section
 --------------------------------------------------------------*/
 .stats {
-  padding: 120px 0;
+  padding: 20px 0;
 }
 
 .stats .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 80px;
-  margin-bottom: 120px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -1511,6 +1512,7 @@ section,
   align-items: center;
   gap: 12px;
   padding: 16px;
+  min-height: 78px;
   background: var(--surface-color);
   border: 1px solid var(--border-light);
   border-radius: 6px;
@@ -1531,6 +1533,8 @@ section,
   font-size: 14px;
   color: var(--default-color);
   font-weight: 400;
+  line-height: 1.4;
+  word-break: break-word;
 }
 
 .skills .skills-sidebar .achievements-section .achievements-title {
@@ -1545,7 +1549,7 @@ section,
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  padding: 16px 0;
+  padding: 18px 0;
   border-bottom: 1px solid var(--border-light);
 }
 
@@ -1555,12 +1559,12 @@ section,
 }
 
 .skills .skills-sidebar .achievements-section .achievement-list .achievement-item .achievement-date {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--accent-color);
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  min-width: 40px;
+  min-width: 56px;
   margin-top: 2px;
 }
 
@@ -1568,7 +1572,7 @@ section,
   font-size: 15px;
   color: var(--default-color);
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @media (max-width: 992px) {
@@ -2144,12 +2148,14 @@ section,
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  padding: 0 4px 6px;
 }
 
 .portfolio .portfolio-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
   margin-bottom: 12px;
   font-size: 14px;
   font-weight: 400;
@@ -2158,10 +2164,12 @@ section,
 .portfolio .portfolio-meta .portfolio-category {
   color: var(--accent-color);
   font-family: var(--heading-font);
+  line-height: 1.4;
 }
 
 .portfolio .portfolio-meta .portfolio-year {
   color: color-mix(in srgb, var(--default-color), transparent 50%);
+  flex-shrink: 0;
 }
 
 .portfolio .portfolio-title {
@@ -2731,6 +2739,7 @@ section,
   font-size: 16px;
   color: var(--default-color);
   line-height: 1.6;
+  word-break: break-word;
 }
 
 .contact .form-header {
@@ -3721,4 +3730,62 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+.skills .skills-sidebar > div,
+.contact .info-item,
+.contact .contact-details,
+.contact .form-wrapper,
+.portfolio .portfolio-card,
+.resume .professional-journey,
+.resume .education-skills {
+  padding: 28px;
+}
+
+.contact .contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact .contact-details .detail-item {
+  margin-bottom: 0;
+}
+
+.portfolio .portfolio-filters {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.portfolio .portfolio-filters li {
+  padding: 12px 14px;
+  border-radius: 999px;
+}
+
+@media (max-width: 991px) {
+  .skills .skills-sidebar > div,
+  .contact .info-item,
+  .contact .contact-details,
+  .contact .form-wrapper,
+  .portfolio .portfolio-card,
+  .resume .professional-journey,
+  .resume .education-skills {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .skills .skills-sidebar .technologies-section .tech-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio .portfolio-meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .contact .form-header {
+    margin-bottom: 28px;
+  }
 }
